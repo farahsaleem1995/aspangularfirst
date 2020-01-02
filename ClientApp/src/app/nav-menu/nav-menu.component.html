@@ -20,25 +20,44 @@
         [ngClass]="{ show: isExpanded }"
       >
         <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              [routerLink]="['/']"
+              routerLinkActive="active"
+              >Home</a
+            >
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/vehicle/new']"
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              [routerLink]="['/vehicles']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Vehicles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              [routerLink]="['/vehicles/new']"
+              routerLinkActive="active"
               >New Vehicle</a
             >
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              [routerLink]="['/counter']"
+              routerLinkActive="active"
               >Counter</a
             >
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              [routerLink]="['/fetch-data']"
+              routerLinkActive="active"
               >Fetch data</a
             >
           </li>

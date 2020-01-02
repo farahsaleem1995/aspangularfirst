@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using aspangularfirst.Controllers.Resources;
+using aspangularfirst.Core.Models;
 using AutoMapper;
 using Vega.Controllers.Resources;
 using Vega.Models;
@@ -24,6 +26,7 @@ namespace Vega.Mapping
         .ForMember(vr => vr.Features, opt => opt.MapFrom(v => v.Features.Select(vf => new KeyValuePairResource { Id = vf.Feature.Id, Name = vf.Feature.Name })));
 
       // API Resources To Domain
+      CreateMap<VehicleQueryResource, VehicleQuery>();
       CreateMap<SaveVehicleResource, Vehicle>()
         .ForMember(v => v.Id, opt => opt.Ignore())
         .ForMember(v => v.ContactName, opt => opt.MapFrom(vr => vr.Contact.Name))
